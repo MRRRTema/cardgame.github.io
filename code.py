@@ -25,8 +25,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await context.bot.send_message(chat_id=update.effective_chat.id, text='В этой игре тебе нужно отгадать цвет масти выбранной мною карты.')
 
     # 3 - Создаем переменные и задаем им значения.
-    context.user_data['CARD_NUMBER'] = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'В', 'Д', 'К', 'Т']
-    context.user_data['CARD_SUIT'] = ['Буби', 'Черви', 'Пики', 'Трефы']
+    context.user_data['CARD_NUMBER'] = ('2', '3', '4', '5', '6', '7', '8', '9', '10', 'В', 'Д', 'К', 'Т')
+    context.user_data['CARD_SUIT'] = ('Буби', 'Черви', 'Пики', 'Трефы')
     context.user_data['random_card_number'] = choice(context.user_data['CARD_NUMBER'])
     context.user_data['random_card_suit'] = choice(context.user_data['CARD_SUIT'])
 
