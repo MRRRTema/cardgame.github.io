@@ -66,7 +66,7 @@ async def message_handler(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await context.bot.send_message(chat_id=update.effective_chat.id, text='Если захотите сыграть еще раз, нажмите /start', reply_markup=reply_markup)
     # Если игрок не угадал цвет
     else:
-        await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Неправильно! Загаданная карта была: {context.user_data['CARD_NUMBER']} {context.user_data['CARD_SUIT']}.')
+        await context.bot.send_message(chat_id=update.effective_chat.id, text=f'Неправильно! Загаданная карта была: {context.user_data['random_card_number']} {context.user_data['random_card_suit']}.')
     
 # Определить функции для обработки неизвестных команд
 async def unknown(update: Update, context: ContextTypes.DEFAULT_TYPE):
